@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InsightStream: Navigate the News Landscape</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f8f9fc;
+    }
+
+    /* Navbar */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 5%;
+      background: #2c3e50;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #1abc9c;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(to right, rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)),
+        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      padding: 0 10%;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      padding: 0.8rem 2rem;
+      background: #1abc9c;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #16a085;
+    }
+
+    /* Categories */
+    .categories {
+      padding: 4rem 10%;
+      text-align: center;
+    }
+    .categories h2 {
+      margin-bottom: 2rem;
+      color: #2c3e50;
+    }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    /* About */
+    .about {
+      padding: 4rem 15%;
+      background: #ecf0f1;
+      text-align: center;
+    }
+    .about h2 {
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    /* Contact */
+    .contact {
+      padding: 4rem 10%;
+      text-align: center;
+    }
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 500px;
+      margin: auto;
+    }
+    .contact input,
+    .contact textarea {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      outline: none;
+      font-family: inherit;
+    }
+    .contact button {
+      padding: 0.8rem;
+      background: #1abc9c;
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .contact button:hover {
+      background: #16a085;
+    }
+
+    /* Footer */
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      padding: 2rem 5%;
+      text-align: center;
+    }
+    footer .socials a {
+      margin: 0 0.5rem;
+      color: #1abc9c;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    footer .socials a:hover {
+      color: #16a085;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">InsightStream</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Navigate the News Landscape</h1>
+      <p>Stay informed with curated, real-time updates from around the globe.</p>
+      <a href="#categories" class="btn">Explore Now</a>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories" id="categories">
+    <h2>Top Categories</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>World</h3>
+        <p>Breaking news and global developments.</p>
+      </div>
+      <div class="card">
+        <h3>Technology</h3>
+        <p>Latest innovations and tech trends.</p>
+      </div>
+      <div class="card">
+        <h3>Business</h3>
+        <p>Markets, startups, and financial news.</p>
+      </div>
+      <div class="card">
+        <h3>Sports</h3>
+        <p>Scores, highlights, and sports stories.</p>
+      </div>
+      <div class="card">
+        <h3>Health</h3>
+        <p>Wellness, medical news, and breakthroughs.</p>
+      </div>
+      <div class="card">
+        <h3>Entertainment</h3>
+        <p>Movies, music, and celebrity news.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2>About InsightStream</h2>
+    <p>InsightStream is your personal gateway to the world's most important stories. We help you navigate the complex news landscape with ease, delivering insights that matter, when they matter.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 InsightStream. All rights reserved.</p>
+    <div class="socials">
+      <a href="#">🌐</a>
+      <a href="#">🐦</a>
+      <a href="#">📸</a>
+    </div>
+  </footer>
+</body>
+</html>
